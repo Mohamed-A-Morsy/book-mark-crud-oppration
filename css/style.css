@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(206, 144, 133);
+}
+
+
+.head{
+    font-family: 'Pacifico';
+    font-size: 50px;
+    border-bottom: 3px dotted black;
+
+}
+.inputs{
+    border-bottom: 3px dotted black;
+}
