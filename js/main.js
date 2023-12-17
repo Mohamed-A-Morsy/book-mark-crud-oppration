@@ -32,7 +32,7 @@ function displayAllSites() {
         <td>${i + 1}</td>
         <td>${allSites[i].name}</td>
         <td><button class="btn btn-success"> <span><i class="fa-solid fa-eye pe-1" style="color: #ffffff;"></i></span>Visit</button> </td>
-        <td><button class="btn btn-danger"> <span><i class="fa-solid fa-trash-can pe-1" style="color: #ffffff;"></i></span>Delete</button> </td>
+        <td><button class="btn btn-danger" onclick="deleteSite(${i});"> <span><i  class="fa-solid fa-trash-can pe-1" style="color: #ffffff;"></i></span>Delete</button> </td>
       </tr>
       
         `
@@ -40,6 +40,11 @@ function displayAllSites() {
     document.getElementById("tbody").innerHTML = cartona;
 
 
+}
+function deleteSite(index) {
+
+    allSites.splice(index, 1);
+    displayAllSites();
 }
 
 
