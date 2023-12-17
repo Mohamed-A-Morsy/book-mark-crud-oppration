@@ -29,15 +29,35 @@
       <label for="sName" class="py-3 fw-bolder"
         ><span><i class="fa-solid fa-book-bookmark"></i></span> Site Name</label
       >
-      <input type="text" class="w-100" id="sName" />
+      <input type="text" class="w-100 form-control" id="sName" />
       <label for="sUrl" class="py-3 fw-bolder">
         <span><i class="fa-solid fa-link"></i></span> Site URl</label
       >
-      <input type="text" class="w-100" id="sUrl" />
+      <input type="text" class="w-100 form-control" id="sUrl" />
       <div class=" text-center pb-5 pt-2">
-        <button id="Submit" class="btn btn-danger my-3">Submit</button>
+        <button id="submit" class="btn btn-danger my-3" onclick="addSites();">Submit</button>
       </div>
     </div>
+
+<table class="table w-75 m-auto text-center mt-3">
+  <thead>
+    <th>index</th>
+    <th>Website Name</th>
+    <th>Visit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody id="tbody">
+  
+    
+  </tbody>
+</table>
+
+
+
+
+
+
+
 
     <script src="./js/all.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
