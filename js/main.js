@@ -5,7 +5,6 @@ var submit = document.getElementById("submit");
 var allSites = [];
 
 function addSites() {
-
     var site = {
         index: 0,
         name: siteNameInput.value,
@@ -13,7 +12,7 @@ function addSites() {
     }
 
     allSites.push(site);
-
+    localStorage.setItem("allSites", JSON.stringify(allSites));
     clearInputs();
     displayAllSites();
 
@@ -35,15 +34,14 @@ function displayAllSites() {
         <td><a href="${allSites[i].siteUrl}"target="_blank"><button class="btn btn-success"><span><i class="fa-solid fa-eye pe-1" style="color: #ffffff;"></i></span> Visit</button></a></td>
         <td><button class="btn btn-danger" onclick="deleteSite(${i});"> <span><i  class="fa-solid fa-trash-can pe-1" style="color: #ffffff;"></i></span>Delete</button> </td>
         <td><button class="btn btn-secondary" onclick=" update(${i})"> <span><i class="fa-solid fa-pen pe-1" style="color: #ffffff;"></i></span>Update</button></td>
-
         </tr>
-
         `
     }
     document.getElementById("tbody").innerHTML = cartona;
-
+    
 
 }
+
 function deleteSite(index) {
 
     allSites.splice(index, 1);
@@ -64,8 +62,8 @@ function update(index) {
         allSites[index].siteUrl = allSites[index].siteUrl
         allSites.splice(index, 1, updatedSite)
         clearInputs();
-        submit.innerHTML="Add"
-        submit.onclick = addSites;
+        submit.innerHTML = "ADD"
+        submit.onclick = addSites();
         displayAllSites();
     }
 
