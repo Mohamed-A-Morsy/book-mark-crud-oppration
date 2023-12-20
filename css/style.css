@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(206, 144, 133);
+    background-color: rgb(188, 166, 162);
 }
 
 
@@ -7,8 +7,13 @@ body{
     font-family: 'Pacifico';
     font-size: 50px;
     border-bottom: 3px dotted black;
+    
 
 }
 .inputs{
     border-bottom: 3px dotted black;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
